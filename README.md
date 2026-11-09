@@ -154,3 +154,9 @@ The logger is a USB HID device that behaves like a 64 KiB memory: the PC reads a
   automatically.
 
 This project is not affiliated with the manufacturer of the DS100 or of DataLogger V2.70.
+
+## License
+
+[MIT](LICENSE). The apps use third-party libraries under their own licenses: PySide6/Qt
+(LGPL-3.0) and pyqtgraph (MIT) on Linux, AndroidX/Jetpack Compose and Kotlin coroutines
+(Apache-2.0) on Android.
