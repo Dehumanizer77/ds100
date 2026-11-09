@@ -18,6 +18,39 @@ graph. It also changes the logger settings exactly like the Windows program does
 |---|---|---|---|
 | <img src="docs/screenshots/android-overview.png" width="200"> | <img src="docs/screenshots/android-history.png" width="200"> | <img src="docs/screenshots/android-graph.png" width="200"> | <img src="docs/screenshots/android-setup.png" width="200"> |
 
+## Is this my logger?
+
+The DS100 is a small battery-powered temperature and humidity data logger with an LCD and a
+USB plug, sold for example by **Pollin** (Temperatur-/Luftfeuchte-Datenlogger DS100).
+The vendor software for Windows is **DataLogger V2.70** (`DataLogger.exe` with `USBDrive.dll`,
+download archive `t113_datalogger_v2_70.zip`).
+
+On Linux it shows up like this:
+
+```
+$ lsusb
+Bus 005 Device 004: ID 1941:8021 Dream Link WH1080 Weather Station / USB Missile Launcher
+
+$ dmesg
+usb 5-2.4: New USB device found, idVendor=1941, idProduct=8021, bcdDevice= 1.00
+usb 5-2.4: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hid-generic 0003:1941:8021.003A: hiddev3,hidraw6: USB HID v1.00 Device [HID 1941:8021] on usb-0000:0c:00.4-2.4/input0
+```
+
+The name shown by `lsusb` comes from the USB ID database: the same USB chip and ID
+`1941:8021` are also used by Fine Offset WH1080/WH1081 weather stations, but those have a
+different memory layout. This project is for the DS100 data logger.
+
+*Deutsch:* Software für Linux und Android für den USB-Temperatur- und Luftfeuchte-Datenlogger
+DS100 (z. B. von Pollin, USB-ID 1941:8021) – ein freier Ersatz für die Windows-Software
+DataLogger V2.70: Daten auslesen, Verlauf und Diagramm, Export als CSV/PNG/PDF, Messintervall,
+°C/°F und Datumsformat einstellen, Uhrzeit stellen.
+
+*Slovensky / česky:* Program pre Linux a Android k USB dataloggeru teploty a vlhkosti DS100
+(USB ID 1941:8021) – náhrada za Windows program DataLogger V2.70: stiahnutie dát, história,
+graf, export do CSV/PNG/PDF, nastavenie intervalu merania, jednotky a dátumu, synchronizácia
+času. Program pro Linux a Android k USB dataloggeru teploty a vlhkosti DS100.
+
 ## Features
 
 Both apps have the same functions as the Windows program:
