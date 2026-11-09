@@ -25,7 +25,7 @@ import java.io.ByteArrayOutputStream
 @OptIn(ExperimentalRoborazziApi::class)
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [34], qualifiers = "en-w392dp-h850dp-xxhdpi")
+@Config(sdk = [34], qualifiers = "en-w412dp-h915dp-xxhdpi")      // e.g. Pixel 7 Pro
 class ScreenshotTest {
     @get:Rule
     val rule = createComposeRule()

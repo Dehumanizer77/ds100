@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 
 package sk.ds100.logger.ui
 
@@ -27,7 +27,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.selection.SelectionContainer
@@ -335,7 +336,7 @@ private fun RangeBar(model: AppModel) {
                 Text(f.date(model.rangeEnd), maxLines = 1)
             }
         }
-        Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             FilterChip(false, { model.setRangeDays(0, 0) }, { Text(stringResource(R.string.today)) })
             FilterChip(false, { model.setRangeDays(-1, -1) }, { Text(stringResource(R.string.yesterday)) })
             FilterChip(false, { model.setRangeDays(-6, 0) }, { Text(stringResource(R.string.last7)) })
@@ -435,8 +436,7 @@ private fun GraphScreen(model: AppModel, dark: Boolean) {
     val density = LocalDensity.current.density
 
     Column(Modifier.fillMaxSize()) {
-        Row(Modifier.padding(horizontal = 12.dp).horizontalScroll(rememberScrollState()),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        FlowRow(Modifier.padding(horizontal = 12.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             for ((k, label) in listOf(ChartKind.BOTH to R.string.both, ChartKind.TEMP to R.string.temperature,
                 ChartKind.HUMI to R.string.humidity, ChartKind.DEW to R.string.dewpoint))
                 FilterChip(kind == k, { kind = k }, { Text(stringResource(label)) })

@@ -6,9 +6,17 @@ Open-source replacement for the Windows program **DataLogger V2.70** that comes 
 It reads the logger, keeps the history in a local database and shows it as a table and a
 graph. It also changes the logger settings exactly like the Windows program does.
 
-| Linux | Android |
+### Linux
+
+| Main window | Graph |
 |---|---|
-| <img src="docs/screenshots/linux-graph.png" width="520"> | <img src="docs/screenshots/android-graph.png" width="220"> |
+| <img src="docs/screenshots/linux-main.png" width="420"> | <img src="docs/screenshots/linux-graph.png" width="420"> |
+
+### Android
+
+| Overview | History | Graph | Setup |
+|---|---|---|---|
+| <img src="docs/screenshots/android-overview.png" width="200"> | <img src="docs/screenshots/android-history.png" width="200"> | <img src="docs/screenshots/android-graph.png" width="200"> | <img src="docs/screenshots/android-setup.png" width="200"> |
 
 ## Features
 
@@ -98,10 +106,6 @@ to USB-A).
 
 The APK is signed with a development key, so Play Protect may call it an unknown app.
 The data are kept inside the app; export them to CSV before uninstalling it.
-
-| Overview | History | Setup |
-|---|---|---|
-| <img src="docs/screenshots/android-overview.png" width="220"> | <img src="docs/screenshots/android-history.png" width="220"> | <img src="docs/screenshots/android-setup.png" width="220"> |
 
 ## Building from source
 
