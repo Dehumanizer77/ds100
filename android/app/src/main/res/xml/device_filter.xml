@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DS100 logger: USB 1941:8021 (decimal 6465:32801) -->
+    <usb-device vendor-id="6465" product-id="32801" />
+</resources>
